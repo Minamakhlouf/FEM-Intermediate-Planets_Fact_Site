@@ -1,0 +1,16 @@
+.modal-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 41px; 
+}
+
+.planet {
+    display: flex; 
+    gap: 25px; 
+    text-decoration: none; 
+    color: white; 
+    text-transform: uppercase; 
+    letter-spacing: 1.36px;
+    font-weight: bold;
+}

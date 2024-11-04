@@ -1,0 +1,40 @@
+.planet-grid {
+    display: none; 
+}
+
+@media screen and (min-width: 780px) {
+    .planet-grid {
+        display: grid; 
+        grid-template-columns: 33% 33% 33%;
+        max-width: 1110px; 
+        width: 100%; 
+        margin: 0 auto; 
+      }
+      
+      .planet {
+        display: block; 
+        text-align: center; 
+      }
+      
+      .planet-item {
+        aspect-ratio: 1;
+        position: relative; 
+      }
+      
+      .image-wrapper {
+        position: absolute; 
+        transform: translatex(-50%) translateY(-50%); 
+        top: 50%; 
+        left: 50%; 
+      }
+      
+      .planet-name {
+        position: absolute; 
+        bottom: 30px; 
+        left: 50%; 
+        color: white; 
+        text-decoration: none;
+        transform: translatex(-50%); 
+        font-size: 16px; 
+      }
+}

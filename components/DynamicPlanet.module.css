@@ -1,0 +1,146 @@
+.planet-grid {
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-areas: "topic" "image" "info";
+}
+
+.planet-image, .planet-info {
+    opacity: 0; 
+    animation: fadeInAnimation 0.3s forwards;
+}
+
+.animate {
+    animation: repeatedAnimation 1s ease-in forwards;  
+}
+
+@keyframes repeatedAnimation {
+    to {
+        opacity: 1; 
+    }
+}
+
+@keyframes fadeInAnimation {
+    to {
+        opacity: 1; 
+        transform: translateY(0); 
+    }    
+}
+
+.planet-topic {
+    grid-area: topic; 
+    display: flex; 
+    justify-content: space-between;
+    padding: 0 24px; 
+}
+
+.planet-topic span {
+    display: none; 
+}
+
+.planet-topic button {
+    font-size: 9px; 
+    text-transform: uppercase; 
+    letter-spacing: 1.93px;
+    background: transparent;
+    color: white; 
+    font-weight: bold; 
+    padding: 17px 0; 
+    cursor: pointer; 
+    border: none; 
+    transition: all 0.2s ease-in-out; 
+}
+
+.planet-image {
+    grid-area: image; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 304px; 
+    position: relative; 
+}
+
+.planet-info {
+    grid-area: info; 
+    color: white; 
+    text-align: center; 
+    padding: 0 24px; 
+    margin-bottom: 28px; 
+}
+
+.planet-info h1 {
+    margin-bottom: 16px; 
+    font-size: 40px; 
+}
+
+.planet-info .content {
+    margin-bottom: 32px; 
+    color: #838391; 
+    line-height: 2; 
+    font-size: 13px; 
+}
+
+.planet-info a {
+    text-decoration: none;
+    color: #838391; 
+}
+
+.planet-info .source {
+    color: #38384f; 
+    font-size: 13px; 
+}
+
+@media screen and (min-width: 768px) {
+    .planet-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0px 69px; 
+        grid-template-areas: "image image" "info topic";
+        padding: 0 40px; 
+        margin-top: 45px; 
+    }
+    .planet-topic {
+        flex-direction: column;
+        justify-content: center;
+        gap: 16px; 
+    }
+    .planet-topic span {
+        display: inline; 
+    }
+    .planet-info {
+        padding: 0; 
+        text-align: left;
+        margin: 0; 
+    }
+    .planet-info h1 {
+        font-size: 48px; 
+    }
+    .planet-topic {
+        padding: 0; 
+    }
+    .planet-image {
+        height: 460px; 
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    .planet-grid {
+        max-width: 1110px; 
+        margin: 126px auto 87px; 
+        grid-template-columns: 1fr 33%;
+        grid-template-areas: "image info" "image topic";
+        gap: 39px 130px; 
+        padding: 0; 
+    }
+    .planet-image {
+        height: unset; 
+    }
+    .planet-info h1 {
+        font-size: 80px; 
+    }
+    .planet-info .content {
+        font-size: 16px; 
+        line-height: 1.78
+    }
+    .planet-info .source {
+        font-size: 16px; 
+    }
+}
