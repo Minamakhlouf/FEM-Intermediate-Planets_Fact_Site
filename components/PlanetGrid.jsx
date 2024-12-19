@@ -10,7 +10,7 @@ export default function PlanetGrid() {
             <div key={planet.name} className={styles["planet-item"]}>
                 <Link href={`/${planet.name.toLowerCase()}`} className={styles["planet-link"]}>
                 <div className={styles["image-wrapper"]} style={{width: `${planet.size.mobile}`, height: `${planet.size.mobile}`}}>
-                    <Image src={planet.images.planet} fill alt={planet.name} />
+                    <Image src={planet.images.planet} fill alt={`Background picture of ${planet.name}`} />
                 </div>
                 <p className={styles["planet-name"]}>{planet.name}</p>
                 </Link>

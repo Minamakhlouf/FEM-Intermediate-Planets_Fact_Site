@@ -15,7 +15,6 @@ export default function Planet({params}) {
 
     if (filteredData.length === 0) {
         notFound(); 
-        return null; 
     }
     return (
         <>
