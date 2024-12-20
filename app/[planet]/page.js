@@ -17,7 +17,7 @@ export default function Planet({params}) {
         notFound(); 
     }
     return (
-        <>
+        <main>
             <DynamicPlanet data={filteredData[0]}/>
             <section className={styles["stats-container"]}>
                 <div className={styles.stat}>
@@ -37,6 +37,6 @@ export default function Planet({params}) {
                     <p className={`${styles.value} ${antonio.className}`}>{filteredData[0].temperature}</p>
                 </div>
             </section>
-        </>
+        </main>
     )
 }

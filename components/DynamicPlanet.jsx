@@ -42,7 +42,7 @@ export default function DynamicPlanet(props) {
                 <h1 className={`${antonio.className}`}>{props.data.name.toUpperCase()}</h1>
                 <div>
                     <p className={styles.content}>{presentedInfo.content}</p>
-                    <p className={styles.source}>Source: <a href={presentedInfo.source}>Wikipedia <Image src="/assets/icon-source.svg" width={12} height={12}/></a></p>
+                    <p className={styles.source}>Source: <a href={presentedInfo.source}>Wikipedia <Image src="/assets/icon-source.svg" width={12} height={12} alt=""/></a></p>
                 </div>
             </div>
             <div className={styles["planet-topic"]}>
