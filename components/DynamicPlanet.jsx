@@ -34,7 +34,7 @@ export default function DynamicPlanet(props) {
     }
 
     return (
-        <main className={styles["planet-grid"]}>
+        <section className={styles["planet-grid"]}>
             <div className={`${styles["planet-image"]} ${animationClass}`}>
                 <PlanetImage selectedInfo={selectedInfo} planet={props.data}/>
             </div>
@@ -50,6 +50,6 @@ export default function DynamicPlanet(props) {
                 <PlanetButton resetAnimation={resetAnimationHandler} updateState={setSelectedInfo} currentState={selectedInfo} stateValue={2} color={props.data.colors.button}><span>02</span>  <span>INTERNAL</span> STRUCTURE</PlanetButton>
                 <PlanetButton resetAnimation={resetAnimationHandler} updateState={setSelectedInfo} currentState={selectedInfo} stateValue={3} color={props.data.colors.button}><span>03</span>  SURFACE <span>GEOLOGY</span></PlanetButton>
             </div>
-        </main>
+        </section>
     )
 }
