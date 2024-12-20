@@ -8,9 +8,9 @@ export default function PlanetImage(props) {
     return (
         <>
         <div className="image-container">
-            <Image src={props.planet.images[imageChoice]} width="100" height="100" layout="responsive"/>
+            <Image src={props.planet.images[imageChoice]} width="100" height="100" layout="responsive" alt={`Picture of planet ${props.planet.name}`}/>
             <div className={`geology-image ${props.selectedInfo === 3 ? "visible" : ""}`} >
-                <Image src={props.planet.images.geology} width="40" height="40" layout="responsive"/>
+                <Image src={props.planet.images.geology} width="40" height="40" layout="responsive" alt={`Geological picture of planet ${props.planet.name}`}/>
             </div>
         </div>
         <style jsx>{`

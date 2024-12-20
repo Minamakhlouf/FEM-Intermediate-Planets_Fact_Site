@@ -19,7 +19,7 @@ export default function Planet({params}) {
     return (
         <>
             <DynamicPlanet data={filteredData[0]}/>
-            <div className={styles["stats-container"]}>
+            <section className={styles["stats-container"]}>
                 <div className={styles.stat}>
                     <p className={styles.property}>Rotation Time</p>
                     <p className={`${styles.value} ${antonio.className}`}>{filteredData[0].rotation}</p>
@@ -36,7 +36,7 @@ export default function Planet({params}) {
                     <p className={styles.property}>Average Temp</p>
                     <p className={`${styles.value} ${antonio.className}`}>{filteredData[0].temperature}</p>
                 </div>
-            </div>
+            </section>
         </>
     )
 }

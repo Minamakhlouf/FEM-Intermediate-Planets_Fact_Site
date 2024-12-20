@@ -15,7 +15,7 @@ export default function PlanetLinkContainer({planet}) {
     return (
         <>
         <ul className={"planet-container"}>
-            {data.map(planet => {return <Link key={planet.name}  href={`${planet.name.toLowerCase()}`}><span className={`planet-link ${path === `/${planet.name.toLowerCase()}` ? "active" : ""}`}>{`${planet.name.toUpperCase()}`}</span></Link>})}
+            {data.map(planet => {return <li key={planet.name}><Link key={planet.name}  href={`${planet.name.toLowerCase()}`}><span className={`planet-link ${path === `/${planet.name.toLowerCase()}` ? "active" : ""}`}>{`${planet.name.toUpperCase()}`}</span></Link></li>})}
         </ul>
         <style jsx>{`
             .planet-container {
